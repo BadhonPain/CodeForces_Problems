@@ -2,38 +2,47 @@
 #include <string>
 #include <cctype>
 using namespace std;
+
 int main()
 {
     int n;
     cin >> n;
-    cin.ignore();
-    string s;
-    getline(cin, s);
-    if (s.length() == n)
+    cin.ignore(); 
+
+    string pangram;
+    getline(cin, pangram); 
+
+    
+    for (int i = 0; i < n; i++)
     {
-        for (int i = 0; i < n; i++)
+        if (isupper(pangram[i]))
         {
-            if (isupper(s[i]))
-            {
-                s[i] = tolower(s[i]);
-            }
+            pangram[i] = tolower(pangram[i]);
         }
-        int count = 0;
-        for (int i = 0; i < n; i++)
-        {
-           for (int j = 0; j < i; j++)
-           {
-            if (s[i]!= s[j])
-            {
-               count ++;
-            }
-            
-           }
-           
-        }
-        if (count == n - 1)
-            cout << "YES" << endl;
-        else
-            cout << "N0" << endl;
     }
+
+    int count = 0;
+    for (int i = 0; i < n; i++)
+    {
+        bool isDistinct = true;
+        for (int j = 0; j < i; j++)
+        {
+            if (pangram[i] == pangram[j])
+            {
+                isDistinct = false;
+                break;
+            }
+        }
+        if (isDistinct && isalpha(pangram[i])) 
+        {
+            count++;
+        }
+    }
+
+    if (count == 26) 
+        cout << "YES" << endl;
+    else
+        cout << "NO" << endl;
+
+    return 0;
 }
