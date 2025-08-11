@@ -1,20 +1,19 @@
 #include <iostream>
 using namespace std;
+
 int main()
 {
-    int n, k;
-    cin >> n >> k;
-    
-    
-  
+    long long n, target;
+    cin >> n >> target;
 
+    if (target <= (n + 1) / 2)
+    {
+        cout << 2 * target - 1 << endl;
+    }
+    else
+    {
+        cout << 2 * (target - (n + 1) / 2) << endl;
+    }
 
-    
-   
-    
-
-
-
-
-
+    return 0;
 }
