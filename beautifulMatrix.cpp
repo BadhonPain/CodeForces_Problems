@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 int main()
 {
@@ -10,25 +11,23 @@ int main()
             cin >> arr[i][j];
         }
     }
-    int count = 0;
-    for (int i = 0; i < 4; i++)
+    bool found = false;
+    int found_row, found_collum ;
+    for (int i = 0; i < 5; i++)
     {
-        for (int j = 0; j < 4; j++)
+        for (int j = 0; j < 5; j++)
         {
-            if (arr[i][j] != 0)
-            {
-                if (i != 2)
-                {
-                    swap(arr[i][j], arr[i + 1][j]);
-                    count++;
-                }
-                else if (j != 2)
-                {
-                    swap(arr[i][j], arr[i][j + 1]);
-                    count++;
-                }
-            }
+          if (arr[i][j]==1)
+          {
+            found = true;
+            found_row =i;
+            found_collum =j;
+            break;
+            
+          }
+          
         }
     }
-    cout << count << endl;
+    if (found)
+    cout << abs(found_row-2) + abs(found_collum-2)  << endl;
 }
