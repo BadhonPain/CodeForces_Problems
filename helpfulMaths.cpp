@@ -5,14 +5,19 @@ int main()
 {
     string s;
     getline(cin, s);
-    for (int i = 0; i < s.length() - 1; i += 2)
-    {
 
-        for (int j = 0; j < s.length() - 1 - i; j += 2)
+    for (int i = 0; i < s.length() - 2; i += 2)
+    {
+        if (s.length() == 1)
         {
-            if (s[j] > s[j + 1])
+            break;
+        }
+
+        for (int j = i + 2; j < s.length(); j += 2)
+        {
+            if (s[i] > s[j])
             {
-                swap(s[j], s[j + 1]);
+                swap(s[i], s[j]);
             }
         }
     }
