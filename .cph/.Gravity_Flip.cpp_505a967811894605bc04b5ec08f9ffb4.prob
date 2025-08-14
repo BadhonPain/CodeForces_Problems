@@ -1,0 +1,1 @@
+{"name":"Local: Gravity_Flip","url":"d:\\Code_forces_problem_rough\\Gravity_Flip.cpp","tests":[{"id":1755133176785,"input":"4\n3 2 1 2\n","output":"1 2 2 3"},{"id":1755133191257,"input":"3\n2 3 8","output":"2 3 8"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Code_forces_problem_rough\\Gravity_Flip.cpp","group":"local","local":true}
