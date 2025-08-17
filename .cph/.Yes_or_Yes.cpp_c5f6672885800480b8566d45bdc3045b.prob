@@ -1,0 +1,1 @@
+{"name":"Local: Yes_or_Yes","url":"d:\\Code_forces_problem_rough\\Yes_or_Yes.cpp","tests":[{"id":1755471385697,"input":"10\nYES\nyES\nyes\nYes\nYeS\nNoo\norZ\nyEz\nYas\nXES\n","output":"YES\nYES\nYES\nYES\nYES\nNO\nNO\nNO\nNO\nNO\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Code_forces_problem_rough\\Yes_or_Yes.cpp","group":"local","local":true}
