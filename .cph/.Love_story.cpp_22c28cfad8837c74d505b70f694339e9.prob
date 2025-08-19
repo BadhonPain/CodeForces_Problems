@@ -1,0 +1,1 @@
+{"name":"Local: Love_story","url":"d:\\Code_forces_problem_rough\\Love_story.cpp","tests":[{"id":1755601524243,"input":"5\ncoolforsez\ncadafurcie\ncodeforces\npaiuforces\nforcescode\n","output":"4\n5\n0\n4\n9\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Code_forces_problem_rough\\Love_story.cpp","group":"local","local":true}
