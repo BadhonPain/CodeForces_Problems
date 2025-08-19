@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <algorithm>
 using namespace std;
 
 int main()
@@ -8,23 +9,23 @@ int main()
     cin >> test;
     while (test--)
     {
+        int n;
+        cin >> n;
         string s;
         cin >> s;
-        
-        int len = s.length();
 
-        if (len % 2 != 0)
+        if (n != 5)
         {
             cout << "NO\n";
             continue;
         }
 
-        string subs1 = s.substr(0, len / 2);
-        string subs2 = s.substr(len / 2, len / 2);
-
-        if (subs1 == subs2)
+        string target = "Timru";
+        sort(s.begin(), s.end());
+        if (s == target)
             cout << "YES\n";
         else
             cout << "NO\n";
     }
+    return 0;
 }
