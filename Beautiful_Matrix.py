@@ -1,4 +1,3 @@
-
 matrix = []
 for i in range(5):
     row = list(map(int, input().split()))
