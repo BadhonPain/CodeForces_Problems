@@ -1,31 +1,21 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
+
 int main()
 {
-string one= "I hate", two=" that I love", three = " that I hate", bonus = " it";
-int n;
-cin >> n;
-if (n==1)
-{
-   one.append(bonus);
-   cout<< one << endl;
-}
-else if (n==2)
-{
-   one.append(two).append(bonus);
-   cout<< one << endl;
-}
-else if (n==3)
-{
-   one.append(two).append(three).append(bonus);
-   cout<< one << endl;
-}
+   int num;
+   cin >> num;
+   for (int i = 1; i <= num; i++)
+   {
+      if (i % 2 == 1)
+         cout << "I hate";
+      else
+         cout << "I love";
 
-
-
-
-
-
-
-
+      if (i == num)
+         cout << " it";
+      else
+         cout << " that ";
+   }
+   return 0;
 }
