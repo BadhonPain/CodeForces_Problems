@@ -1,21 +1,33 @@
 #include <iostream>
 using namespace std;
+bool is_lucky(string s)
+{
+    bool not_lucky = false;
+    for (int i = 0; i < s.length(); i++)
+    {
+        if (s[i] != 4 || s[i] != 7)
+        {
+            not_lucky = true;
+            break;
+        }
+    }
+
+    if (not_lucky)
+    {
+        return false;
+    }
+    else
+        return true;
+}
 int main()
 {
-   int n, a;
+    int n;
     cin >> n;
-    int count = 0;
-    while (n > 0)
+    string s = to_string(n);
+    if (is_lucky(s))
     {
-        a = n % 10;
-        if (a == 4 || a == 7)
-        {
-            count++;
-        }
-        n= n/10;
+        cout << "YES\n";
     }
-    if (count == 4 || count == 7)
-        cout << "YES" << endl;
     else
-        cout << "NO" << endl;
+        cout << "NO\n";
 }
