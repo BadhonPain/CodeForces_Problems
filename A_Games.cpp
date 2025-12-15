@@ -7,7 +7,6 @@ int main()
     int count = 0;
     int homeArr[test];
     int awayArr[test];
-
     for (int i = 0; i < test; i++)
     {
         cin >> homeArr[i] >> awayArr[i];
@@ -22,6 +21,5 @@ int main()
             }
         }
     }
-
     cout << count << endl;
 }
