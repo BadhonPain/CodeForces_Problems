@@ -1,6 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
-
 int main()
 {
     int n;
@@ -10,21 +9,43 @@ int main()
     {
         cin >> arr[i];
     }
-    int starting_idx= -1, ending_idx = -1;
-    int sereja_point = 0, dima_point = 0;
-    for (int i = 0; i < n; i++)
+    int start = 0;
+    int end = n - 1;
+    int sp = 0;
+    int dp = 0;
+    int count = 0;
+    while (start <= end)
     {
-        if (i % 2 == 0)
+        if (count % 2 == 0)
         {
-            if (arr[i]> arr[n-1-i])
+            if (arr[start] > arr[end])
             {
-                sereja_point+= arr[i];
+                sp += arr[start];
+                start++;
             }
-            else sereja_point+= arr[n-1-i];
-            
+            else
+            {
+                sp += arr[end];
+                end--;
+            }
         }
         else
-            dima_point += arr[i];
+
+        {
+            if (arr[start] > arr[end])
+            {
+                dp += arr[start];
+                start++;
+            }
+            else
+            {
+                dp += arr[end];
+                end--;
+            }
+        }
+        count++;
     }
-    cout << sereja_point << " " << dima_point << endl;
+    cout << sp << " " << dp << endl;
+
+    return 0;
 }
