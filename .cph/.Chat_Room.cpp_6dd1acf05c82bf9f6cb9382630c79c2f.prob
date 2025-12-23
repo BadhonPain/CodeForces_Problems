@@ -1,1 +1,0 @@
-{"name":"Local: Chat_Room","url":"d:\\Code_forces_problem_rough\\Chat_Room.cpp","tests":[{"id":1755132221312,"input":"ahhellllloou\n","output":"YES"},{"id":1755132230542,"input":"hlelo\n","output":"NO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Code_forces_problem_rough\\Chat_Room.cpp","group":"local","local":true}

@@ -1,1 +1,0 @@
-{"name":"Local: pangram","url":"d:\\Code_forces_problem_rough\\pangram.cpp","tests":[{"id":1754886126924,"input":"35\nTheQuickBrownFoxJumpsOverTheLazyDog","output":"YES"},{"id":1754886196967,"input":"12\ntoosmallword","output":"NO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Code_forces_problem_rough\\pangram.cpp","group":"local","local":true}

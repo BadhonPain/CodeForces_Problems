@@ -1,1 +1,0 @@
-{"name":"Local: HQ9","url":"d:\\Code_forces_problem_rough\\HQ9.cpp","tests":[{"id":1755015026261,"input":"Hi!\n","output":"YES\n"},{"id":1755015056303,"input":"Codeforces\n","output":"NO\n"},{"id":1755031167473,"input":"a+b","output":"NO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Code_forces_problem_rough\\HQ9.cpp","group":"local","local":true}
