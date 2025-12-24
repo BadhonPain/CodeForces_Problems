@@ -19,8 +19,10 @@ int main()
         {
             cin >> brr[i];
         }
+
         ll minA = LLONG_MAX, minB = LLONG_MAX;
         ll count = 0;
+        
         for (int i = 0; i < n; i++)
         {
             minA = min(minA, arr[i]);
