@@ -6,21 +6,19 @@ int main()
     cin >> test;
     while (test--)
     {
-        int x1, y1, x2, y2, x3, y3, x4, y4;
-        cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3 >> x4 >> y4;
-        if (x1 == x2)
+        int arr[4];
+        int sum = 0;
+        for (int i = 0; i < 4; i++)
         {
-            cout << (y1 - y2) * (y1 - y2) << endl;
-            continue;
+            cin >> arr[i];
+            sum += arr[i];
         }
-        else if (x1 == x3)
+        sort(arr, arr + 4);
+        if (sum == 4 * arr[0])
         {
-            cout << (y1 - y3) * (y1 - y3) << endl;
-            continue;
+            cout << "YES" << endl;
         }
-        else if (x1 == x4)
-        {
-            cout << (y1 - y4) * (y1 - y4) << endl;
-        }
+        else
+            cout << "NO" << endl;
     }
 }

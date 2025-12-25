@@ -1,28 +1,25 @@
 import java.util.*;
 
 public class A_Square {
-
-    public static void main() {
-        Scanner scanner = new Scanner(System.in);
-        int test;
-        test = scanner.nextInt();
-        while (test != 0) {
-            int a, b, c, d;
-            a = scanner.nextInt();
-            b = scanner.nextInt();
-            c = scanner.nextInt();
-            d = scanner.nextInt();
-            if (a == b) {
-                if (b == c) {
-                    if (c == d) {
-                        System.out.println("YES");
-                    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        if (sc.hasNextInt()) {
+            int test = sc.nextInt();
+            while (test-- > 0) {
+                int[] arr = new int[4];
+                int sum = 0;
+                for (int i = 0; i < 4; i++) {
+                    arr[i] = sc.nextInt();
+                    sum += arr[i];
                 }
-            } else
-                System.out.println("NO");
-
-                test--;
+                Arrays.sort(arr);
+                if (sum == 4 * arr[0]) {
+                    System.out.println("YES");
+                } else {
+                    System.out.println("NO");
+                }
+            }
         }
-        scanner.close();
+        sc.close();
     }
 }
