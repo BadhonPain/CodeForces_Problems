@@ -11,17 +11,16 @@ int main()
         cin >> x >> y;
         cin >> a >> b;
         ll cost1 = 0, cost2 = 0, cost = 0;
+        cost1 += (x + y) * a;
         if (x && y)
         {
             ll temp = min(x, y);
-            cost1 += temp * b;
+            cost2 += temp * b;
             x -= temp;
             y -= temp;
         }
-        else
-            cost1 += (x + y) * a;
         cost2 += (x + y) * a;
-        cost = min(cost1, cost2);
-        cout << cost << endl;
+
+        cout << min(cost1, cost2) << endl;
     }
 }
