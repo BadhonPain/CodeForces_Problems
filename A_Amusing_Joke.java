@@ -21,5 +21,6 @@ public class A_Amusing_Joke {
         } else {
             System.out.println("NO");
         }
+        scanner.close();
     }
 }
