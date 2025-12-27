@@ -10,9 +10,7 @@ int main()
         cin >> n >> k;
         int arr[n];
         for (int i = 0; i < n; i++)
-        {
             cin >> arr[i];
-        }
         if (count(arr, arr + n, k))
             cout << "YES" << endl;
         else
