@@ -1,44 +1,41 @@
 #include <bits/stdc++.h>
 using namespace std;
+bool is_prime[1000005];
 
-bool isSquare(int n)
-{
-    if (n == 1)
-        return false;
-
-    int root = sqrt(n);
-    if ((root * root) == n)
-    {
-        return true;
-    }
-    return false;
-}
-bool wired_even(int n)
-{
-    if ((n == 4) || (n == 2))
-    {
-        return true;
-    }
-    if (n % 2 == 0)
-    {
-        return false;
-    }
-    return true;
-}
 int main()
 {
-    int n;
-    cin >> n;
-    int arr[n];
-    for (int i = 0; i < n; i++)
+
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    memset(is_prime, true, sizeof(is_prime));
+    is_prime[0] = is_prime[1] = false;
+    for (int p = 2; p * p < sizeof(is_prime); p++)
     {
-        cin >> arr[i];
+        if (is_prime[p])
+        {
+            for (int i = p * p; i < sizeof(is_prime); i += p)
+                is_prime[i] = false;
+        }
     }
-    for (int i = 0; i < n; i++)
+
+    int test;
+    cin >> test;
+    while (test--)
     {
-        if (isSquare(arr[i]) && (wired_even(arr[i])))
-            cout << "YES" << endl;
+        long long n;
+        cin >> n;
+
+        long long root = round(sqrt(n));
+
+        if (root * root == n && is_prime[root])
+        {
+            cout << "YES\n";
+        }
         else
-            cout << "NO" << endl;
+        {
+            cout << "NO\n";
+        }
     }
+    return 0;
 }
