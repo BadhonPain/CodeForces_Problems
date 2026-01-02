@@ -8,13 +8,16 @@ int main()
     {
         string s;
         cin >> s;
-        string s2;
-        for (int i = 0; i < s.size(); i++)
+        vector<char> str;
+        str.push_back(s[0]);
+        for (int i = 1; i < s.size(); i += 2)
         {
-            int j = 0;
-            if (i % 2 == 0)
-                s2[j++] = s[i];
+            str.push_back(s[i]);
         }
-        cout << s2 << endl;
+        for (int i = 0; i < str.size(); i++)
+        {
+            cout << str[i];
+        }
+        cout << endl;
     }
 }
