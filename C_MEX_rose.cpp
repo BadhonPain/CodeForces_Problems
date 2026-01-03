@@ -10,37 +10,21 @@ int main()
         int n, k;
         cin >> n >> k;
         vector<int> arr;
+        unordered_map<int, int> freq;
         for (int i = 0; i < n; i++)
         {
             int x;
             cin >> x;
             arr.push_back(x);
+            freq[x]++;
         }
-        sort(arr.begin(), arr.end());
-        bool all_present = true;
-        int mex = -1;
-        int idx = -1;
-        for (int i = 0; i < n; i++)
+        int abs = 0;
+        for (int i = 0; i < k; i++)
         {
-            if (arr[i] != i)
-            {
-                all_present = false;
-                idx = i;
-                break;
-            }
+            if (freq[i] == 0)
+                abs++;
         }
-        if (all_present)
-            mex = n;
-        else
-            mex = idx;
-        if (mex == k)
-            cout << 0 << endl;
-        else
-        {
-            if (count(arr.begin(), arr.end(), k) != 0)
-                cout << count(arr.begin(), arr.end(), k) << endl;
-            else
-                cout << 1 << endl;
-        }
+        int count_k = freq[k];
+        cout << max(count_k, abs) << endl;
     }
 }
